@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script>
+                $(document).ready(function(){
+                    let testData = $(".test li").eq(0);
+
+                    // li태그중 1번 인덱스의 값인 b를 반환
+                    console.log(testData.text()); // b
+
+                    $("h1").css("background-color","green").add("ul").css("color","red")
+
+
+                    var h1 = "<h1>YAHO</h1>";
+                    var h2 = "<h2>GOOD</h2>"
+
+                    $(".test").append(h1,h2,h1,h2)
+
+
+                    var content = [
+                        {name:"맥주", regin: "울산"},
+                        {name:"소주", regin:"부산"},
+                        {name:"막걸리", regin:"북극"}
+                    ];
+
+
+                    $("div").append(function(index){
+                        var item = content[index];
+                        var output = '';
+
+                        output += "<h1>"+item.name+"</h1>";
+                        output += "<h2>"+item.regin+"</h2>";
+
+                        return output;
+                    });
+                    
+                });
+    </script>
+
+</head>
+<body>
+    <div class="test">
+        <ul>
+          <li>a</li>
+          <li>b</li>
+          <li>c</li>
+        </ul>
+      </div>
+      <div></div>
+      <div></div>
+      <h1>하하하</h1>
+</body>
+</html>
