@@ -41,12 +41,46 @@
         // sum();
         // console.log(a);
 
-        var text="outside";
-        function printScope(){
-            console.log(text);
-            var text= "inside";
+        // var text="outside";
+        // function printScope(){
+        //     console.log(text);
+        //     var text= "inside";
+        // }
+        // printScope();
+
+
+        // var arr = [10,20,30,40,50];
+        // arr.unshift(0);
+        // console.log(arr);
+        
+        // var date = new Date().getTime();
+        // console.log(date);
+
+
+        // var birth = new Date(1993,8,21).getTime();
+        // console.log(birth);
+
+        // var value = (date-birth)/1000/60/60/24/365;
+        // console.log(value+1);
+
+        // function maxRandom(max){
+        //     return Math.floor(Math.random()*(max+1));
+        // }
+        // var value = maxRandom(3);
+        // console.log(value);
+        
+        var result = 0;
+        var arr = [10,120,30,50,20];
+        function list(){
+            for(i = 0;i<arr.length;i++){
+                if(arr[i]>result){
+                    result = arr[i]
+                }
+            }
+            return result;
         }
-        printScope();
+        var value = list();
+        console.log(value);
     </script>
 </head>
 <body>
